@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/863b4a3bd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Productos</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <div class="dashboard">
+            <div class="menu-lateral">
+                
+                <a href="index.html"><img src="img/logoMiga.png" alt="Logo" class="logo-miga"></a>
+                
+                <a href="ingresoDashboard.html"><i class="fa-solid fa-house"></i></a>
+                
+                <a href="productos.html"><i class="fa-solid fa-shop"></i></a>
+                
+                <a href="logistica.html"><i class="fa-solid fa-box"></i></a>
+                
+                <a href="puntuacionCliente.html"><i class="fa-solid fa-medal"></i></a>
+                
+                <!-- <a href="#"><i class="fa-solid fa-file-circle-check"></i></a> -->
+                
+                <!-- <a href="blog.html"><i class="fa-solid fa-gem"></i></a> -->
+                
+                <!-- <a href="#"><i class="fa-solid fa-gear"></i></a> -->
+                
+            </div> <!--Menu Lateral-->
+            
+            <div class="layout-busqueda">   
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div> <!--Buscador-->
+                
+                <div class="accesos-directos">
+
+                    <div class="contenido-caja__acceso--directo">
+                        <button onclick="ingresarProducto()" class="caja-acceso__directo pedido backgroundCss flex-center">
+                            <p>Crear Pedido</p>
+                        </button>
+                        
+                        <button onclick="productos()" class="caja-acceso__directo pedidos backgroundCss">
+                            <p>Pedidos en <br> Tramite</p>
+                        </button>
+                        
+                        <button onclick="pedidosFinalizados()" class="caja-acceso__directo actividad3 backgroundCss">
+                            <p>Pedidos <br> Finalizados</p>
+                        </button>
+                    </div> <!--Accesos directos-->
+                </div>
+                
+                <!-- CAJAS DE ESTADISTICAS -->
+                <div class="campos_estadisticas flex-column">
+                    <div class="contenido_paneles__Estadisticos" id="ocultarPanel">
+                        <div class="caja_productosEstadisticas flex-column cajaProducto1 backgroundCss ">
+                            <h2>Pedidos realizados el ultimo mes</h2>
+                            <p class="number">70</p>
+                        </div>
+                        
+                        <div class="caja_productosEstadisticas flex-column cajaProducto2 backgroundCss">
+                            <h2>Pedidos cancelados</h2>
+                            <p class="number">10</p>
+                        </div>
+                    </div>
+
+                    <!-- FORMULARIO DE REGISTRO DE PRODUCTOS -->
+                    <div class="formIngresoProductos" id="formularioProductos">
+                        <h2>Nuevo Pedido</h2> 
+                        <h5>Por favor ingrese los datos del cliente y su compra.</h5>
+
+                        <!-- FORMULARIO -->
+                        <form name="registroDatos" action="" class="formularioProducto">
+                            <div class="campos">
+                                <input id="nombre" type="text" placeholder="Nombres del Cliente" required>
+                            </div>
+
+                            <div class="campos">
+                                <input id="nombre" type="text" placeholder="Apellidos del Cliente" required>
+                            </div>
+                            
+                            <div class="campos">
+                                <input id="precio" type="selec" placeholder="Tipo de Documento" required>
+                            </div>
+
+                            <div class="campos">
+                                <input id="precio" type="tel" placeholder="Numero de Documento" required>
+                            </div>
+
+                            <div class="campos">
+                                <input id="precio" type="text" placeholder="Referencia Producto" required>
+                            </div>
+                            
+                            <div class="campos">
+                                <input id="descripcion" type="tel" placeholder="Precio producto" required>
+                            </div>
+                            
+                            <div class="campos">
+                                <input id="cantidad" type="number" placeholder="Cantidad Solicitada" required>
+                            </div>
+
+                            <div class="campos">
+                                <input id="cantidad" type="tel" placeholder="Telefono Cliente" required>
+                            </div>
+
+                            <div class="campos">
+                                <input id="cantidad" type="text" placeholder="Correo Electronico" required>
+                            </div>
+
+                            <div class="campos">
+                                <input id="cantidad" type="text" placeholder="Direccion de Entrega" required>
+                            </div>
+ 
+                            <div class="campos">
+                                <input type="submit" value="Enviar" onclick="obtenerDatos()">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- PRODUCTOS REGISTRADOS-->
+                    <div class="productosRegistrados" id="productosRegistrados">
+
+                        <h2>Pedidos en curso</h2>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Apellido: <span id="precioProducto"> Rodriguez Gonzalez </span> </p>
+                                <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                                <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                                <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                                <p>Producto: <span id="descripcionProducto"> Jugos naturales</span></p>
+                                <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                                <button><i class="fa-solid fa-pencil"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/malteada.avif" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Apellido: <span id="precioProducto"> Rodriguez Gonzalez </span> </p>
+                                <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                                <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                                <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                                <p>Producto: <span id="descripcionProducto"> Pan surtido artesanal</span></p>
+                                <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                                <button><i class="fa-solid fa-pencil"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/pan.avif" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Apellido: <span id="precioProducto"> Rodriguez Gonzalez </span> </p>
+                                <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                                <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                                <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                                <p>Producto: <span id="descripcionProducto"> Malteada de Chocolate</span></p>
+                                <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                            </div>
+
+
+                            <div class="icons flex-column">
+                                <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                                <button><i class="fa-solid fa-pencil"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/malteada.avif" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Apellido: <span id="precioProducto"> Rodriguez Gonzalez </span> </p>
+                                <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                                <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                                <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                                <p>Producto: <span id="descripcionProducto"> Croisant de Sabores</span></p>
+                                <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                            </div>
+
+
+                            <div class="icons flex-column">
+                                <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                                <button><i class="fa-solid fa-pencil"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/croisant.avif " alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--PRODUCTOS REGISTRADOS-->
+                </div>
+
+                <!-- PEDIDOS FINALIZADOS -->
+                <div class="pedidosFinalizados" id="pedidosFinalizados">
+                    <h2>Pedidos Finalizados</h2>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                            <p>Apellido: <span id="precioProducto"> Rodriguez Gonzalez </span> </p>
+                            <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                            <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                            <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                            <p>Producto: <span id="descripcionProducto">Gaseosa Coca-Cola</span></p>
+                            <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                        </div>
+
+
+                        <div class="icons flex-column">
+                            <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                            <button><i class="fa-solid fa-pencil"></i></button>
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/cocacola.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Nombre: <span id="nombreProducto"> Daniel Arbelaez</span> </p>
+                            <p>Apellido: <span id="precioProducto"> Arbelaez Saldana </span> </p>
+                            <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                            <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                            <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                            <p>Producto: <span id="descripcionProducto"> Gaseosa Pepsi</span></p>
+                            <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                        </div>
+
+
+                        <div class="icons flex-column">
+                            <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                            <button><i class="fa-solid fa-pencil"></i></button>
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/pepsi.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Nombre: <span id="nombreProducto"> Gissel Arbelaez</span> </p>
+                            <p>Apellido: <span id="precioProducto"> Arbelaez Gonzalez </span> </p>
+                            <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                            <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                            <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                            <p>Producto: <span id="descripcionProducto">Huevos AA</span></p>
+                            <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                        </div>
+
+
+                        <div class="icons flex-column">
+                            <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                            <button><i class="fa-solid fa-pencil"></i></button>
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/huevos.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Nombre: <span id="nombreProducto"> JennyAngela</span> </p>
+                            <p>Apellido: <span id="precioProducto"> Saldana Gonzalez </span> </p>
+                            <p>Documento Cliente: <span id="cantidadProducto"> CC - 1030658869 </span></p>
+                            <p>Direccion: <span id="descripcionProducto"> DG 5&A SUR NO 81 J 34</span></p>
+                            <p>Correo: <span id="descripcionProducto"> angielorena77@hotmail.com</span></p>
+                            <p>Producto: <span id="descripcionProducto"> Pan Integral</span></p>
+                            <p>Cantidad: <span id="descripcionProducto"> 2 </span></p>
+                        </div>
+
+
+                        <div class="icons flex-column">
+                            <button onclick="borrar()"><i class="fa-solid fa-trash"></i></button> 
+                            <button><i class="fa-solid fa-pencil"></i></button>
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/panintegral.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--lAYOUT DE BUSQUEDA-->
+
+            <div class="datos">
+                <div class="perfil">
+                    <a href="#"><i class="fa-solid fa-bell"></i></a> 
+                    <p>Daniel Arbelaez</p>
+                    <img src="img/perfil.jpg" alt="">
+                </div> <!--Perfil-->
+                
+                <div class="contenedor-ultimos__datos">
+                    <div class="ultimos-datos primerDato">
+                        <div class="icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        
+                        <div class="descripcion">
+                            <p>Últimos productos vendidos</p>
+                            <h1>23</h1>
+                        </div>
+                        
+                        <div class="icono-final">
+                            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div><!--Ultimos datos-->
+                    
+                    <div class="ultimos-datos primerDato">
+                        <div class="icono">
+                            <i class="fa-sharp fa-solid fa-box"></i>
+                        </div>
+                        
+                        <div class="descripcion">
+                            <p>Ultimos pedidos. <b>15 - 09 - 2022</b></p>
+                            
+                            <br>
+                            
+                            <div class="contenedor-puntuacion">
+                                <!-- <h3>Jueves, 15</h3>  -->
+                                <p class="">Lorena Rodriguez - Bogota D.C</p>
+                            </div>
+                        </div>
+                        
+                        <div class="icono-final">
+                            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div><!--Ultimos datos-->  
+                </div>
+                
+                <div class="clientes-destacados" id="clientesDestacados">
+                    <h2>Clientes destacados</h2>
+
+                    <div class="contenido-caja__cliente">
+                        <div class="caja-cliente cliente1 backgroundCss">
+                            <p>Daniel</p>
+                        </div> 
+    
+                        <div class="caja-cliente cliente2 backgroundCss">
+                            <p>Angela</p>
+                        </div> 
+    
+                        <div class="caja-cliente cliente3 backgroundCss">
+                            <p>Gabriella</p>
+                        </div>
+                    </div>
+                </div> <!--Clientes destacados-->
+
+                <div class="soporte-tecnico" id="botonSoporteTecnico">
+                    <button onclick="mostrarFormularioSoporte()" class="contenedor-soporte__tecnico backgroundCss"><h2>¿Necesita ayuda? <br> Contacte con soporte técnico.</h2></button>
+                </div>
+
+                <div class="formulario_soporte" id="formulario_soporte">
+                    <h2>Contacte con nuestro soporte tecnico</h2>
+
+                    <form action="" class="soporteTecnico">
+                        <div class="campos">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="text" placeholder="Problema a reportar" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="text" placeholder="Observaciones" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+                
+            </div> <!--CONTENEDOR DATOS-->
+        </div><!--DASHBOARD-->
+    </div> <!--CONTENEDOR-->
+    
+    <script src="script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/863b4a3bd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Productos</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <div class="dashboard">
+            <div class="menu-lateral">
+                
+                <a href="index.html"><img src="img/logoMiga.png" alt="Logo" class="logo-miga"></a>
+                
+                <a href="ingresoDashboard.html"><i class="fa-solid fa-house"></i></a>
+                
+                <a href="productos.html"><i class="fa-solid fa-shop"></i></a>
+                
+                <a href="logistica.html"><i class="fa-solid fa-box"></i></a>
+                
+                <a href="puntuacionCliente.html"><i class="fa-solid fa-medal"></i></a>
+                
+                <!-- <a href="#"><i class="fa-solid fa-file-circle-check"></i></a> -->
+                
+                <!-- <a href="blog.html"><i class="fa-solid fa-gem"></i></a> -->
+                
+                <!-- <a href="#"><i class="fa-solid fa-gear"></i></a> -->
+                
+            </div> <!--Menu Lateral-->
+            
+            <div class="layout-busqueda">   
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div> <!--Buscador-->
+                
+                <div class="accesos-directos">
+
+                    <div class="contenido-caja__acceso--directo">
+                        <button onclick="ingresarProducto()" class="caja-acceso__directo buenaCalificacion backgroundCss flex-center">
+                            <p>Mejores Puntuaciones</p>
+                        </button>
+                        
+                        <button onclick="productos()" class="caja-acceso__directo malaCalificacion backgroundCss">
+                            <p>Puntuaciones <br> Bajas</p>
+                        </button>
+                        
+                        <button onclick="pedidosFinalizados()" class="caja-acceso__directo calificacionPendiente backgroundCss">
+                            <p>Puntuaciones Pendientes</p>
+                        </button>
+                    </div> <!--Accesos directos-->
+                </div>
+                
+                <!-- CAJAS DE ESTADISTICAS -->
+                <div class="campos_estadisticas flex-column">
+                    <div class="contenido_paneles__Estadisticos" id="ocultarPanel">
+                        <div class="caja_productosEstadisticas flex-column cajaPanaderia cajaProducto1 backgroundCss ">
+                            <h2>Ultima calificacion</h2>
+                            <div class="content-calificacion flex-column">
+                                <p class="number"><i class="fa-solid fa-medal"></i></p> 
+                                <p class="calificacion">Exlente servicio, pedido entregado muy rapido y excelente empaque</p>
+                            </div>
+                        </div>
+                        
+                        <div class="caja_productosEstadisticas flex-column cajaPanaderia2 cajaProducto1 backgroundCss">
+                            <h2>Pedidos Confirmados</h2>
+                            <p class="number">78</p>
+                        </div>
+                    </div>
+
+                    <!-- FORMULARIO DE REGISTRO DE PRODUCTOS -->
+                    <div class="formIngresoProductos" id="formularioProductos">
+                        <h2>Mejores Puntuaciones</h2> 
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 10 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Entrega inmediata, excelente plataforma </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/anillo.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Daniela Arbelaez</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 9 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Excelente atencion, pedido en buen estado </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/collar2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 10 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Entrega inmediata, excelente plataforma </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/collar.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Daniela Arbelaez</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 9 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Excelente atencion, pedido en buen estado </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/anillo3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 10 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Entrega inmediata, excelente plataforma </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/anillo3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Daniela Arbelaez</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 9 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Excelente atencion, pedido en buen estado </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-regular fa-face-smile"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/collar3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTOS REGISTRADOS-->
+                    <div class="productosRegistrados" id="productosRegistrados">
+
+                        <h2>Malas Puntuaciones</h2>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Angie Lorena</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 2 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Pedido en mal estado y muy demorada la entrega </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-solid fa-face-sad-tear"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/anillo.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datosProductos" id="eliminar">
+                            <div class="descripcionProductos">
+                                <p>Nombre: <span id="nombreProducto"> Daniela Arbelaez</span> </p>
+                                <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                                <p>Calificacion: <span id="descripcionProducto"> 5 de 10 </span></p>
+                                <p>Observaciones: <span id="descripcionProducto"> Atencion lenta, falta optimizar </span></p>
+                            </div>
+
+                            <div class="icons flex-column">
+                                <button><i class="fa-solid fa-face-sad-tear"></i></button>
+                            </div>
+
+                            <div class="imagenProductos">
+                                <div class="imagenProducto" id="imagenProducto">
+                                    <img src="img/collar2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--PRODUCTOS REGISTRADOS-->
+                </div>
+
+                <!-- PEDIDOS FINALIZADOS -->
+                <div class="pedidosFinalizados" id="pedidosFinalizados">
+                    <h2>Calificaciones Pendientes</h2>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Fecha: <span id="nombreProducto"> 15 - Octubre - 2022</span> </p>
+                            <p>Nombre: <span id="nombreProducto"> Daniela Arbelaez</span> </p>
+                            <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                            <p>Calificacion: <span id="descripcionProducto"> Pendiente </span></p>
+                        </div>
+
+                        <div class="icons flex-column">
+                            <!-- <button><i class="fa-solid fa-face-sad-tear"></i></button> -->
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/collar2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Fecha: <span id="nombreProducto"> 20 - Octubre - 2022</span> </p>
+                            <p>Nombre: <span id="nombreProducto"> Lorena Arbelaez</span> </p>
+                            <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                            <p>Calificacion: <span id="descripcionProducto"> Pendiente </span></p>
+                        </div>
+
+                        <div class="icons flex-column">
+                            <!-- <button><i class="fa-solid fa-face-sad-tear"></i></button> -->
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/anillo2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datosProductos" id="eliminar">
+                        <div class="descripcionProductos">
+                            <p>Fecha: <span id="nombreProducto"> 10 - Octubre - 2022</span> </p>
+                            <p>Nombre: <span id="nombreProducto"> Gissel Arbelaez</span> </p>
+                            <p>Producto: <span id="descripcionProducto"> Aretes de Oro 18 KL</span></p>
+                            <p>Calificacion: <span id="descripcionProducto"> Pendiente </span></p>
+                        </div>
+
+                        <div class="icons flex-column">
+                            <!-- <button><i class="fa-solid fa-face-sad-tear"></i></button> -->
+                        </div>
+
+                        <div class="imagenProductos">
+                            <div class="imagenProducto" id="imagenProducto">
+                                <img src="img/collar3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--lAYOUT DE BUSQUEDA-->
+
+            <div class="datos">
+                <div class="perfil">
+                    <a href="#"><i class="fa-solid fa-bell"></i></a> 
+                    <p>Daniel Arbelaez</p>
+                    <img src="img/perfil.jpg" alt="">
+                </div> <!--Perfil-->
+                
+                
+
+                <div class="contenedor-ultimos__datos">
+                    <div class="ultimos-datos primerDato">
+                        <div class="icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        
+                        <div class="descripcion">
+                            <p>Últimos productos vendidos</p>
+                            <h1>23</h1>
+                        </div>
+                        
+                        <div class="icono-final">
+                            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div><!--Ultimos datos-->
+                    
+                    <div class="ultimos-datos primerDato">
+                        <div class="icono">
+                            <i class="fa-sharp fa-solid fa-box"></i>
+                        </div>
+                        
+                        <div class="descripcion">
+                            <p>Ultimos pedidos. <b>15 - 09 - 2022</b></p>
+                            
+                            <br>
+                            
+                            <div class="contenedor-puntuacion">
+                                <!-- <h3>Jueves, 15</h3>  -->
+                                <p class="">Lorena Rodriguez - Bogota D.C</p>
+                            </div>
+                        </div>
+                        
+                        <div class="icono-final">
+                            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div><!--Ultimos datos-->  
+                </div>
+                
+                <div class="clientes-destacados" id="clientesDestacados">
+                    <h2>Clientes destacados</h2>
+
+                    <div class="contenido-caja__cliente">
+                        <div class="caja-cliente cliente1 backgroundCss">
+                            <p>Daniel</p>
+                        </div> 
+    
+                        <div class="caja-cliente cliente2 backgroundCss">
+                            <p>Angela</p>
+                        </div> 
+    
+                        <div class="caja-cliente cliente3 backgroundCss">
+                            <p>Gabriella</p>
+                        </div>
+                    </div>
+                </div> <!--Clientes destacados-->
+
+                <div class="soporte-tecnico" id="botonSoporteTecnico">
+                    <button onclick="mostrarFormularioSoporte()" class="contenedor-soporte__tecnico backgroundCss"><h2>¿Necesita ayuda? <br> Contacte con soporte técnico.</h2></button>
+                </div>
+
+                <div class="formulario_soporte" id="formulario_soporte">
+                    <h2>Contacte con nuestro soporte tecnico</h2>
+
+                    <form action="" class="soporteTecnico">
+                        <div class="campos">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="text" placeholder="Problema a reportar" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="text" placeholder="Observaciones" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+                
+            </div> <!--CONTENEDOR DATOS-->
+        </div><!--DASHBOARD-->
+    </div> <!--CONTENEDOR-->
+    
+    <script src="script/index.js"></script>
+</body>
+</html>

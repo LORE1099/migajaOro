@@ -1,0 +1,182 @@
+:root {
+    --amarilloCalor: #E3A231;
+    --cafePrincipal: #814A0D;
+    --amarilloFiltro: #e3a2313d;
+    --amarilloFiltroOscuro: #e3a2317a;
+    --fuentePrincipal: 'Open Sans', sans-serif;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    position: relative;
+}
+
+body {
+    font-size: 16px;
+    font-family: Calibri;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background: url(../img/login.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+/* ================================ */
+/* MAIN */
+/* ================================ */
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.section {
+    width: 40%;
+    background-image: linear-gradient(to bottom, #f2f3f5 0%, #ffffff 100%);
+    border-bottom-left-radius: 9rem;
+    right: 0px;
+}
+
+.cabecera-formulario {
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--rosaOscuro);
+    text-align: right;
+    border-bottom-left-radius: 8rem;
+    padding: 3rem 3rem 6rem 3rem;
+}
+
+
+.casita i {
+    color: #FFF;
+    font-size: 3rem;
+}
+
+.inicio_sesion {
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.inicio_sesion h1 {
+    font-size: 4.5rem;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.inicio_sesion p {
+    font-size: 2.2rem;
+    color: #FFF;
+    font-weight: 400;
+}
+
+/* FORMULARIO */
+form {
+    height: 40rem;
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.2rem;
+    color: var(--rosaOscuro);
+    font-weight: lighter;
+}
+
+
+.campos input {
+    width: 40rem;
+    height: 5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--rosaOscuro);
+    background-color: transparent;
+}
+
+.enviar {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    border: 1px solid var(--rosaOscuro);
+    padding: 1.5rem;
+    width: 30rem;
+    border-radius: 3rem;
+    color: #FFF;
+    background-color: var(--rosaOscuro);
+    cursor: pointer;
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.enviar:hover {
+    background-color: transparent;
+    color: var(--rosaOscuro);
+}
+
+/* REDES SOCIALES */
+.redes-sociales {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales a {
+    padding: 0 2rem;
+    color: var(--rosaOscuro);
+    font-size: 3rem;
+    transition: all .3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+
+}
+
+/* media queries*/
+
+/* @media only screen and (max-width:480px) {    
+    .section,
+    .casita .inicio_sesion,
+    .section2, 
+    .redes_sociales {
+     width: 100%;     
+
+}
+    body{    
+    background: url(../Img/imagen__movil.jpg);
+    max-width: auto;
+    height: auto;  
+    float: left; 
+}
+    }
+  
+@media only screen and (min-width:480px) and (max-width:1024px) {
+ 
+
+
+   }
+   
+  

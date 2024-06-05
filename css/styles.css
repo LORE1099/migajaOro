@@ -1,0 +1,387 @@
+:root {
+    --amarilloCalor: #E3A231;
+    --cafePrincipal: #814A0D;
+    --amarilloFiltro: #e3a2313d;
+    --amarilloFiltroOscuro: #e3a2317a;
+    --fuentePrincipal: 'Open Sans', sans-serif;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--fuentePrincipal);
+}
+
+body {
+
+}
+
+/* ======================= */
+/* GLOBALES */
+/* ======================= */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none
+}
+
+section {
+    height: 100vh;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.boton {
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: .8rem;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+/* BOTON AMRILLO */
+.boton-amarillo {
+    color: #FFF !important;
+    background-color: var(--amarilloCalor) !important;
+    border: solid 1px var(--amarilloCalor) !important;
+}
+
+.boton-amarillo:hover {
+    background-color: transparent !important;
+    color: var(--amarilloCalor) !important;
+}
+
+/* BOTON BLANCO */
+.boton-blanco {
+    color: var(--amarilloCalor) !important;
+    background-color: #FFF !important;
+
+}
+
+.boton-blanco:hover {
+    background-color: #FFF !important;
+    color: var(--cafePrincipal) !important;
+}
+
+/* BOTON CAFE */
+.boton-cafe {
+    color: #FFF !important;
+    background-color: var(--cafePrincipal) !important;
+}
+
+.boton-cafe:hover {
+    background-color: #fff !important;
+    color: var(--cafePrincipal) !important;
+}
+
+/* VENTANA MODAL ERROR */
+.modal {
+    display: none;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.925);
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 99;
+    width: 80%;
+    height: 20rem;
+    background-color: #e3a231c2;
+    border-radius: 2rem;
+    margin: 1rem auto;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.icono-modal {
+    font-size: 3.5rem;
+    color: #FFF;
+}
+
+.mensaje-modal {
+    text-align: center;
+    color: #FFF;
+    font-size: .9rem;
+}
+
+.none {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+/* VENTANA MODAL GUARDADO */
+.guardado {
+    
+}
+
+.icono-modal {
+    font-size: 3.5rem;
+    color: #FFF;
+}
+
+.mensaje-modal {
+    text-align: center;
+    color: #FFF;
+    font-size: .9rem;
+}
+
+/* SECTION INDEX */
+.modulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.logo {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.migaja {
+    width: 8rem;
+}
+
+.logo h1 {
+    color: var(--amarilloCalor);
+}
+
+/* FORMULARIO */
+form {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+form label {
+    color: var(--cafePrincipal);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form .campos {
+    display: inherit;
+    align-items: center;
+    width: 90%;
+    gap: 1rem;
+}
+
+form .campos input {
+    width: 90%;
+    height: 2.5rem;
+    background-color: var(--amarilloFiltro);
+    border-radius: 1rem;
+    color: var(--cafePrincipal);
+    font-weight: bold;
+    border: none;
+    padding: 0 1rem;
+}
+
+form a {
+    text-decoration: underline;
+    color: var(--cafePrincipal);
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+/* ======================= */
+/* VISTA PAGINA PRINCIPAL */
+/* ======================= */
+header {
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--amarilloFiltroOscuro);
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.logo-barra {
+    width: 100%;
+    display: inherit;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-barra img {
+    width: 6rem
+}
+
+.logo-barra p {
+    color: var(--cafePrincipal);
+}
+
+.menu-paginas {
+    justify-content: space-between !important;
+}
+
+.menu-paginas i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* SECTION ITEMS */
+section.menu {
+    height: auto;
+    justify-content: space-around;
+    align-items: start;
+
+}
+
+.items-menu {
+    width: 100%;
+}
+
+.items-menu a {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 1rem 0 1rem 2rem;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.items-menu a:hover {
+    background-color: var(--amarilloFiltro);
+}
+
+.items-menu .icono {
+    width: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.items-menu .name-item {
+    
+}
+
+.fa-credit-card, .name-item1 {
+    color: #025E73;
+}
+.fa-cart-shopping, .name-item2 {
+    color: #011F26;
+}
+.fa-shop, .name-item3 {
+    color: #8C2A3C;
+}
+.fa-user-tie, .name-item4 {
+    color: #8C6B4F;
+}
+.fa-file, .name-item5 {
+    color: #F2A71B;
+}
+
+/* PLUS MENU */
+.boton-inicio {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.contenedor-i {
+    position: relative;
+    z-index: 99;
+    width: 4rem;
+    height: 4rem;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--amarilloCalor);
+    border-radius: 100%;
+    
+}
+
+.boton-inicio i {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* GRID ITEMS */
+.grid-items {
+    display: none;
+    position: absolute;
+    gap: 2rem;
+}
+
+.grid-items-boton {
+    display: flex;
+}
+
+.grid-items i {
+
+}
+
+.grid-items .fa-cart-shopping {
+    color: #011F26;
+}
+
+.grid-items .fa-credit-card {
+    position: relative;
+    top: -5rem;
+    color: #025E73;
+}
+
+.grid-items .fa-shop {
+    color: #8C2A3C;
+}
+
+/* ======================= */
+/* REGISTRO PRODUCTO */
+/* ======================= */
+section.registro-producto {
+    height: 70vh;
+}
+
+/* ======================= */
+/* CONTACTO ADMINISTRADOR */
+/* ======================= */
+.contenido-contacto {
+    display: inherit;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.contenido-contacto .contacto-mensaje {
+    color: var(--cafePrincipal);
+    font-size: 1rem;
+    padding: 0 1.5rem;
+}
+
+.contenido-contacto p {
+    color: rgb(11, 82, 139);
+    cursor: pointer;
+}
+

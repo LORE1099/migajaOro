@@ -1,0 +1,168 @@
+/* Globales */
+html {
+    font-size: 62.5%;
+    position: relative;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+:root {
+    --amarilloCalor: #E3A231;
+    --cafePrincipal: #814A0D;
+    --amarilloFiltro: #e3a2313d;
+    --amarilloFiltroOscuro: #e3a2317a;
+    --fuentePrincipal: 'Open Sans', sans-serif;
+
+}
+
+img {
+    width: 3%;
+
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.section {
+    text-align: center;
+}
+
+.casita {
+    /*  text-align: right; */
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10rem;
+}
+
+.casita .casita1 img {
+    width: 25%;
+}
+
+.casita .casita2 i {
+    font-size: 25px;
+    color: var(--rosaSecundario);
+    margin-top: 1.7rem;
+}
+
+
+.inicio_sesion,
+h1 {
+    font-family: "Sofia", sans-serif;
+    font-size: 45px;
+    line-height: 0.8;
+    /* espacio entre lineas de texto */
+    padding: 3rem;
+    background-color: var(--rosaSecundario);
+    border-radius: 0px 190px 0px 190px;
+}
+
+
+hr {
+    margin: 1rem;
+}
+
+.section_introduccion {
+    margin: 3rem;
+
+}
+
+.section_introduccion img {
+    width: 45%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: auto;
+}
+
+/* img:hover {
+    transform: scaleX(-1);
+} */
+
+.section_contenido {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'Calibri';
+    color: rgb(0, 56, 112);
+    padding: 3rem 0;
+}
+
+h2 {
+    text-align: center;
+
+}
+
+.section_video iframe {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.redes_sociales {
+    max-width: 100rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 1;
+    display: flex;
+
+
+}
+
+.redes_sociales a {
+    color: var(--rosaSecundario);
+    transition: background-color .10s;
+    margin-left: 1.8rem;
+    margin-top: 100rem;
+    cursor: pointer;
+
+}
+
+.redes_sociales .fa-brands fa-google,
+.fa-solid fa-envelope,
+.fa-solid fa-cloud,
+.fa-brands fa-facebook,
+a,
+i {
+    text-decoration: none;
+    font-size: 45px;
+    /* el tamaño de los iconos */
+
+}
+
+.facebook a i:hover {
+    color: rgb(31, 31, 155);
+}
+
+.whatsapp a i:hover {
+    color: rgb(7, 184, 66);
+}
+
+.instagram a i:hover {
+    color: rgb(135, 31, 167);
+}
+
+.footer__p {
+    text-align: center;
+    color: var(--rosaPrincipal);
+    margin-top: 0.8rem;
+    margin-bottom: 3rem;
+}
+
+/* SECTION VIDEO */
+.section_video {
+    width: 120rem;
+    margin: 0 auto;
+}

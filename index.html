@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/863b4a3bd9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/styles.css">
+    <title>Migaja de Oro</title>
+    <link rel="icon" href="img/logoMiga.png">
+</head>
+<body>
+
+    <!-- MODAL CONFIRME CONTRASENA  -->
+    <div class="modal flex-column" id="modal">
+        <div class="error" id="error">
+            <i class="fa-solid fa-square-xmark icono-modal"></i>
+            <h3 class="mensaje-modal">Contraseña erronea, confirme sus datos</h3>
+            <button class="boton boton-blanco" id="cerrarError" onclick="cerrarModal()">Reintentar</button>
+        </div>
+    </div>
+
+    <section class="modulo flex-column">
+        <div class="logo flex-column">
+            <img src="img/logoMiga.png" alt="Logo" class="migaja">
+            <h1>Migaja de Oro</h1>
+        </div>
+
+        <form action="" class="inicio-secion flex-column">
+            <label for="">Iniciar sesion</label>
+            
+            <div class="campos flex-column">
+                <input type="input" placeholder="Usuario" data-usuario>
+                <input type="password" placeholder="Contraseña" data-contrasena>
+                <input class="boton boton-amarillo" type="submit" value="Ingresar" data-enviar>
+            </div>
+
+            <a href="contactoContrasena.html">¿Haz olvidado tu contraseña?</a>
+        </form>
+    </section>
+
+
+
+    
+    <!-- FINALIZAR COMPRA -->
+    <!-- <div class="error" id="confirmarGuardar">
+        <i class="fa-solid fa-question icono-modal"></i>
+        <h3 class="mensaje-modal">¿Seguro desea guardar el registro?</h3>
+        <button class="boton boton-blanco" id="cerrarError">Si</button>
+        <button class="boton boton-blanco" id="cerrarError">No</button>
+    </div> -->
+
+    <!-- MODAL GUARDAR -->
+    <!-- <div class="error" id="guardar">
+        <i class="fa-solid fa-check icono-modal"></i>
+        <h3 class="mensaje-modal">Guardado con exito</h3>
+        <button class="boton boton-blanco" id="cerrarGuardar">Salir</button>
+    </div> -->
+
+    
+    <script src="script/scripts.js"></script>
+        // VENTANA MODAL GUARDADO
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const guardar = document.querySelector('#guardar');
+        //     const cerrarGuardar = document.querySelector('#cerrarGuardar');
+
+        //     cerrarGuardar.addEventListener('click', function () {
+        //         guardar.classList.add('none');
+        //     });
+        // });
+</body>
+</html>

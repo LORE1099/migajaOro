@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/863b4a3bd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <div class="dashboard">
+            <div class="menu-lateral">
+
+                <a href="index.html"><img src="img/logoMiga.png" alt="Logo" class="logo-miga"></a>
+                
+                <a href="ingresoDashboard.html"><i class="fa-solid fa-house"></i></a>
+                
+                <a href="productos.html"><i class="fa-solid fa-shop"></i></a>
+                
+                <a href="logistica.html"><i class="fa-solid fa-box"></i></a>
+                
+                <a href="puntuacionCliente.html"><i class="fa-solid fa-medal"></i></a>
+                
+                <!-- <a href="#"><i class="fa-solid fa-file-circle-check"></i></a> -->
+                
+                <!-- <a href="blog.html"><i class="fa-solid fa-gem"></i></a> -->
+                
+                <!-- <a href="#"><i class="fa-solid fa-gear"></i></a> -->
+
+            </div> <!--Menu Lateral-->
+    
+            <div class="layout-busqueda">   
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div> <!--Buscador-->
+
+                <div class="actividad-reciente">
+                    <h2>Hola, Lore Rodriguez.</h2>
+
+                    <p>Aquí puedes ver la actividad reciente dentro de la pagina web. </p>
+                    <ul>
+                        <li>Se vendieron 4 productos nuevos.</li>
+                        <li>Se registraron 5 clientes nuevos</li>
+                    </ul>
+
+                    <a href="logistica.html" class="boton-actividad__reciente">Ver más</a>
+                </div> <!--Actividad reciente-->
+
+                <div class="accesos-directos">
+                    <h2>Accesos Directos</h2>
+
+                    <div class="contenido-caja__acceso--directo">
+                        <a href="logistica.html" class="caja-acceso__directo actividad1 backgroundCss">
+                            <p>Últimos Pedidos</p>
+                        </a>
+    
+                        <a href="#" class="caja-acceso__directo actividad2 backgroundCss">
+                            <p>Informes</p>
+                        </a>
+    
+                        <a href="productos.html" class="caja-acceso__directo actividad3 backgroundCss">
+                            <p>Productos</p>
+                        </a>
+                    </div> <!--Accesos directos-->
+                </div>
+
+                <div class="grafico">
+                    <h2>Resumen ventas</h2>
+
+                    <div class="grafico-estadisticas">
+                        <img src="img/grafico.png" alt="">
+                    </div>
+                </div>
+            </div> <!--lAYOUT DE BUSQUEDA-->
+
+            
+    
+            <div class="datos">
+                <div class="perfil">
+                    <a href="#"><i class="fa-solid fa-bell"></i></a> 
+                    <p>Lore Rodriguez</p>
+                    <img src="img/perfil.png" alt="">
+                </div> <!--Perfil-->
+
+                <div class="contenedor-ultimos__datos">
+                    <div class="ultimos-datos primerDato">
+                        <div class="icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+    
+                        <div class="descripcion">
+                            <p>Últimos productos vendidos</p>
+                            <h1>23</h1>
+                        </div>
+    
+                        <div class="icono-final">
+                            <a href="logistica.html"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div><!--Ultimos datos-->
+
+                    <div class="ultimos-datos primerDato">
+                        <div class="icono">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+    
+                        <div class="descripcion">
+                            <p>Ultima puntuacion</p>
+                            
+                            <div class="contenedor-puntuacion">
+                                <h1>8.5</h1> 
+                                <p class="parrafo-encuesta">Excelente producto, todo a tiempo</p>
+                            </div>
+                        </div>
+    
+                        <div class="icono-final">
+                            <a href="puntuacionCliente.html"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div><!--Ultimos datos-->  
+                </div>
+
+                <div class="clientes-destacados" id="clientesDestacados">
+                    <h2>Clientes destacados</h2>
+
+                    <div class="contenido-caja__cliente">
+                        <div class="caja-cliente cliente1 backgroundCss">
+                            <p>Daniel</p>
+                        </div> 
+    
+                        <div class="caja-cliente cliente2 backgroundCss">
+                            <p>Angela</p>
+                        </div> 
+    
+                        <div class="caja-cliente cliente3 backgroundCss">
+                            <p>Gabriella</p>
+                        </div>
+                    </div>
+                </div> <!--Clientes destacados-->
+
+                <div class="soporte-tecnico" id="botonSoporteTecnico">
+                    <button onclick="mostrarFormularioSoporte()" class="contenedor-soporte__tecnico backgroundCss"><h2>¿Necesita ayuda? <br> Contacte con soporte técnico.</h2></button>
+                </div>
+
+                <div class="formulario_soporte" id="formulario_soporte">
+                    <h2>Contacte con nuestro soporte tecnico</h2>
+
+                    <form action="" class="soporteTecnico">
+                        <div class="campos">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="text" placeholder="Problema a reportar" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="text" placeholder="Observaciones" required>
+                        </div>
+
+                        <div class="campos">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+
+            </div> <!--CONTENEDOR DATOS-->
+        </div><!--DASHBOARD-->
+    </div> <!--CONTENEDOR-->
+
+    <script src="script/index.js"></script>
+</body>
+</html>
